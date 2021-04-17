@@ -2,10 +2,14 @@
 ==================================================
 > ahNotification.js is a javascript library that provides simple, stylish, responsive and functional notifications
 
+#
+
 Documentation and Demos
 ----------
 See demos and full documentation at:
 ### https://ahmadhayyan.github.io/ahnotification.js
+
+#
 
 Credits
 ----------
