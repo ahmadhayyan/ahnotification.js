@@ -1,0 +1,253 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>ahNotification.js</title>
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+		<script>
+			function removeUser(var1){
+				popupNotification('Success', 'Deleted user '+var1);
+			}
+			function copy(text){
+				const copyText = document.getElementById(text).textContent;
+				const textArea = document.createElement('textarea');
+				textArea.textContent = copyText;
+				document.body.append(textArea);
+				textArea.select();
+				document.execCommand("copy");
+				textArea.parentNode.removeChild(textArea);
+				
+				popupNotification('Success', 'Text Copied');
+			}
+		</script>
+		<style>
+			body{
+				font-family: calibri;
+				font-size: 1em;
+				background-color: #fafafa;
+				//background-image: linear-gradient(339deg, rgba(47, 47, 47,0.02) 0%, rgba(47, 47, 47,0.02) 42%,transparent 42%, transparent 99%,rgba(17, 17, 17,0.02) 99%, rgba(17, 17, 17,0.02) 100%),linear-gradient(257deg, rgba(65, 65, 65,0.02) 0%, rgba(65, 65, 65,0.02) 11%,transparent 11%, transparent 92%,rgba(53, 53, 53,0.02) 92%, rgba(53, 53, 53,0.02) 100%),linear-gradient(191deg, rgba(5, 5, 5,0.02) 0%, rgba(5, 5, 5,0.02) 1%,transparent 1%, transparent 45%,rgba(19, 19, 19,0.02) 45%, rgba(19, 19, 19,0.02) 100%),linear-gradient(29deg, rgba(28, 28, 28,0.02) 0%, rgba(28, 28, 28,0.02) 33%,transparent 33%, transparent 40%,rgba(220, 220, 220,0.02) 40%, rgba(220, 220, 220,0.02) 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+			}
+			a{
+				text-decoration: none;
+			}
+			#wrapper{
+				width: 755px;
+				margin: 0 auto;
+				padding: 10px;
+			}
+			h1::after{
+				content: '';
+				display: block;
+				width: 100%;
+				height: 1px;
+				background-color: rgba(0,0,0,0.3);
+				border-radius: 15px;
+			}
+			.flex-wrapper{
+				display: flex;
+				flex-wrap: wrap;
+				width: 100%;
+			}
+			.flex-text{
+				width: 45%;
+			}
+			.flex-img{
+				max-width: 33%;
+			}
+			.flex-text-right{
+				margin-left: 10%;
+			}
+			.subtitle{
+				font-size: 1.5em;
+				font-weight: bold;
+			}
+			#btnDownload{
+				background-color: transparent;
+				padding: 10px 20px;
+				border: 1px solid #aec6cf;
+				border-radius: 8px;
+				cursor: pointer;
+				transition: 0.6s;
+			}
+			#btnDownload:hover{
+				box-shadow: inset 9.7em 0 0 -3em #aec6cf;
+				color: white;
+			}
+			.coding{
+				font-family: Courier New,monospace;
+				line-height: 1.30769231;
+				color: #2f3337;
+				background-color: #f6f6f6;
+				border: 1px solid lightgray;
+				border-radius: 5px;
+				margin: 0;
+				padding: 12px;
+				overflow: auto;
+			}
+			.str{
+				color: #080;
+			}
+			.bool{
+				color: blue;
+			}
+			.img{
+				width: 100%;
+			}
+			input, select, button{
+				font-size: 0.83em;
+			}
+			.btnCode{
+				float: right;
+				margin-top: calc( -1.4em - 24px );
+				position: relative;
+			}
+			.btnCode-overflow{
+				margin-top: calc( -1.4em - 41px );
+			}
+			.btnGithub{
+				position: relative;
+				top: -3em;
+				float: right;
+				margin-bottom: -3em;
+			}
+			.brokenSht{
+				display: none;
+			}
+			@media screen and (max-width: 999px){
+				#wrapper{
+					width: 80%;
+				}
+			}
+			@media screen and (max-width: 580px){
+				.desktopOnly{
+					display: none;
+				}
+			}
+			@media screen and (max-width: 499px){
+				body{
+					font-size: 0.7em;
+				}
+				#wrapper{
+					width: 95%;
+				}
+				#btnDownload{
+					padding: 5px 10px;
+				}
+				.btnCode-overflow{
+					margin-top: calc( -1.4em - 24px );
+				}
+				.btnGithub{
+					top: -3.5em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<script id="ahNotification" src="ahNotification.min.js"></script>
+		
+		<div id="wrapper">
+			<h1>ahNotification.js</h1>
+			<span class="btnGithub">
+				<a class="github-button" href="https://github.com/ahmadhayyan/ahNotification.js" aria-label="Star ahmadhayyan/ahNotification.js on GitHub">Star</a>
+				<span class="desktopOnly" style="margin-left: 3px;"><a class="github-button" href="https://github.com/ahmadhayyan" aria-label="Follow @ahmadhayyan on GitHub">Follow @ahmadhayyan</a></span>
+			</span>
+			
+			<div class="flex-wrapper">
+				<p class="flex-text"><text class="subtitle">Summary</text><br/>
+				ahNotification.js is a javascript library that provides simple, stylish, responsive and functional notifications.</p>
+				<p class="flex-text flex-text-right"><text class="subtitle">Download</text><br/>
+				Download ahNotification.min.js right now.<br/><br/>
+				<a href="ahNotification.min.js" download><span id="btnDownload">Download</span></a> v1.0.0
+				</p>
+			</div>
+			<p>
+				<text class="subtitle">How To Install</text><br/>
+				<b>IMPORTANT!</b> Put this inside body element</p>
+			<pre class="coding"><code id="script">&lt;script id="ahNotification" src="ahNotification.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;</code></pre>
+			<button class="btnCode" onclick="copy('script');">Copy</button><br/>
+			
+			<text class="subtitle">How To Use</text><br/>
+			<pre class="coding"><code>popupNotification(<text class='str'>type</text>, <text class='str'>text</text>, <text class='bool'>button</text>, <text class='str'>function</text>);</code></pre>
+			<p>
+				&bull; <b>type</b> <text class='str'>(string)</text> = "Info", "Success", "Warnings", "Error".<br/>
+				&bull; <b>text</b> <text class='str'>(string)</text> is any information you want to show the user.<br/>
+				&bull; <b>button</b> <text class='bool'>(boolean)</text> = true, false.<br/>
+				&bull; <b>function</b> <text class='str'>(string)</text> is a function you want to run when user click confirm on the button.<br/>
+				
+				<div class="flex-wrapper">
+					<span class="feature flex-img"><center><h3>4 Different Types</h3><img src="ahNotification.png" class="img"/></center></span>
+					<span class="feature flex-img"><center><h3>Functional With Buttons</h3><img src="ahNotification_btn.png" class="img"/></center></span>
+					<span class="feature flex-img"><center><h3>Support CSS & HTML Tag</h3><img src="ahNotification_css.png" class="img"/></center></span>
+				</div>
+				
+				<h3>Screenshot</h3><center><img src="ahNotification_dashboard.png" class="img"/></center>
+				
+				<br/>
+				<h3>Examples:</h3>
+				<pre class="coding"><code>popupNotification(<text class='str'>"Info"</text>, <text class='str'>"An informative messages"</text>);</code></pre>
+				<button class="btnCode" onclick="popupNotification('Info', 'An informative messages');">Try Me</button><br/>
+				<pre class="coding"><code>popupNotification(<text class='str'>"Warnings"</text>, <text class='str'>"Remove user Henry?"</text>, <text style='color: blue;'>true</text>, <text class='str'>"removeUser('Henry')"</text>);</code></pre>
+				<button class="btnCode" onclick="popupNotification('Warnings', 'Remove user Henry?', true, 'removeUser(\'Henry\')');">Try Me</button><br/>
+				
+				<h3>Or try yourself</h3>
+				<form method="post" onclick="return false;">
+					<select id="type" name="type">
+						<option value="Info">Info</option>
+						<option value="Success">Success</option>
+						<option value="Warnings">Warnings</option>
+						<option value="Error">Error</option>
+					</select>
+					<input type="text" id="text" name="text" placeholder="text" value="This is information text"/>
+					<select id="btn" name="btn">
+						<option value=1>With Button</option>
+						<option value=0>Without Button</option>
+					</select>
+					<input type="text" id="func" name="func" placeholder="function" value="removeUser('Frank')"/>
+					<button onclick="popupNotification(document.getElementById('type').value, document.getElementById('text').value, document.getElementById('btn').value, document.getElementById('func').value);">Show Notification</button>
+				</form>
+			</p>
+			<br/>
+			<footer>Copyright © ahmadhayyan</footer>
+		</div>
+	</body>
+</html>
+
+<script>
+	var year = new Date().getFullYear();
+	document.getElementsByTagName('footer')[0].innerHTML = "&copy; "+ year + " <a class='footer_link' href='https://ahmadhayyan.github.io'>ahmadhayyan</a>" + ". All Rights Reserved.";
+	
+	function checkOverflow(el, i){
+		var curOverflow = el.style.overflow;
+
+		if ( !curOverflow || curOverflow === "visible" )
+			el.style.overflow = "hidden";
+
+		var isOverflowing = el.clientWidth < el.scrollWidth 
+			|| el.clientHeight < el.scrollHeight;
+
+		el.style.overflow = curOverflow;
+		if (i > 0){
+			i -= 1;
+		}
+		changeResolution(i, isOverflowing);
+	}
+	function changeResolution(i, overflow){
+		var btnCoding = document.getElementsByClassName("btnCode");
+		if (overflow){
+			btnCoding[i].classList.add("btnCode-overflow");
+		} else{
+			btnCoding[i].classList.remove("btnCode-overflow");
+		}
+	}
+	function checkResolution(){
+		var wrapperCode = document.getElementsByClassName("coding");
+		for (var i = 0; i < wrapperCode.length; i++){
+			if (i != 1){
+				checkOverflow(wrapperCode[i], i);
+			}
+		}
+	}
+	window.addEventListener("resize", function(event) {
+		checkResolution();
+	});
+	checkResolution();
+</script>
