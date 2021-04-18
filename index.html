@@ -47,14 +47,6 @@
 				margin: 0 auto;
 				padding: 10px;
 			}
-			h1::after{
-				content: '';
-				display: block;
-				width: 100%;
-				height: 1px;
-				background-color: rgba(0,0,0,0.3);
-				border-radius: 15px;
-			}
 			.flex-wrapper{
 				display: flex;
 				flex-wrap: wrap;
@@ -69,9 +61,23 @@
 			.flex-text-right{
 				margin-left: 10%;
 			}
+			h1::after{
+				content: '';
+				display: block;
+				width: 100%;
+				height: 1px;
+				background-color: rgba(0,0,0,0.3);
+				border-radius: 15px;
+			}
 			.subtitle{
 				font-size: 1.5em;
 				font-weight: bold;
+			}
+			.btnGithub{
+				position: relative;
+				top: -3em;
+				float: right;
+				margin-bottom: -3em;
 			}
 			#btnDownload{
 				background-color: transparent;
@@ -116,15 +122,6 @@
 			.btnCode-overflow{
 				margin-top: calc( -1.4em - 41px );
 			}
-			.btnGithub{
-				position: relative;
-				top: -3em;
-				float: right;
-				margin-bottom: -3em;
-			}
-			.brokenSht{
-				display: none;
-			}
 			@media screen and (max-width: 999px){
 				#wrapper{
 					width: 80%;
@@ -142,14 +139,14 @@
 				#wrapper{
 					width: 95%;
 				}
+				.btnGithub{
+					top: -3.5em;
+				}
 				#btnDownload{
 					padding: 5px 10px;
 				}
 				.btnCode-overflow{
 					margin-top: calc( -1.4em - 24px );
-				}
-				.btnGithub{
-					top: -3.5em;
 				}
 			}
 		</style>
