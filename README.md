@@ -6,7 +6,7 @@
 Documentation and Demos
 ----------
 See demos and full documentation at:
-https://ahmadhayyan.github.io/ahnotification.js
+https://ahnotification.js.org
 
 
 Credits
