@@ -89,14 +89,14 @@
 			}
 			#btnDownload:hover{
 				box-shadow: inset 9.7em 0 0 -3em #aec6cf;
-				color: white;
+				color: #fff;
 			}
 			.coding{
 				font-family: Courier New,monospace;
 				line-height: 1.30769231;
 				color: #2f3337;
 				background-color: #f6f6f6;
-				border: 1px solid lightgray;
+				border: 1px solid #d3d3d3;
 				border-radius: 5px;
 				margin: 0;
 				padding: 12px;
@@ -106,7 +106,10 @@
 				color: #080;
 			}
 			.bool{
-				color: blue;
+				color: #0000ff;
+			}
+			.html{
+				color: #327094;
 			}
 			.img{
 				width: 100%;
@@ -132,7 +135,24 @@
 					display: none;
 				}
 			}
-			@media (screen and (max-width: 499px)) or (screen and (max-width: 900px) and (max-height: 499px)){
+			@media screen and (max-width: 900px) and (max-height: 499px){
+				body{
+					font-size: 0.7em;
+				}
+				#wrapper{
+					width: 95%;
+				}
+				.btnGithub{
+					top: -3.5em;
+				}
+				#btnDownload{
+					padding: 5px 10px;
+				}
+				.btnCode-overflow{
+					margin-top: calc( -1.4em - 24px );
+				}
+			}
+			@media screen and (max-width: 499px){
 				body{
 					font-size: 0.7em;
 				}
@@ -172,7 +192,7 @@
 			<p>
 				<text class="subtitle">How To Install</text><br/>
 				<b>IMPORTANT!</b> Put this inside body element</p>
-			<pre class="coding"><code id="script">&lt;script id="ahNotification" src="https://rawcdn.githack.com/ahmadhayyan/ahnotification.js/v1.0.0/ahNotification.min.js" integrity="sha384-YN4GV5ZWZ9ZuLdXVbZhdCT8AIyx9NBuYNn0taXRTZ1A03fnx+ZSt7SE46GPgihNq" crossorigin="anonymous"&gt;&lt;/script&gt;</code></pre>
+			<pre class="coding"><code id="script">&lt;<text class='html'>script id</text>=<text class='str'>"ahNotification"</text> <text class='html'>src</text>=<text class='str'>"https://rawcdn.githack.com/ahmadhayyan/ahnotification.js/v1.0.0/ahNotification.min.js</text>" <text class='html'>integrity</text>=<text class='str'>"sha384-YN4GV5ZWZ9ZuLdXVbZhdCT8AIyx9NBuYNn0taXRTZ1A03fnx+ZSt7SE46GPgihNq"</text> <text class='html'>crossorigin</text>=<text class='str'>"anonymous"</text>&gt;&lt;/<text class='html'>script</text>&gt;</code></pre>
 			<button class="btnCode" onclick="copy('script');">Copy</button><br/>
 			
 			<text class="subtitle">How To Use</text><br/>
