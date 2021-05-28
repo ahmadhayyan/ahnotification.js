@@ -1,5 +1,5 @@
 # ahNotification.js
-ahNotification.js is a javascript library that provides simple, stylish, responsive and functional/interactable notifications.
+ahNotification.js is a javascript library that provides simple, lightweight, stylish, responsive and functional/interactable notifications.
 
 <table border="0" align="center">
   <tr>
