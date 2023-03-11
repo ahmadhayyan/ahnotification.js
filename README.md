@@ -1,6 +1,6 @@
 # ahNotification.js
 [![ahNotification version](https://badge.fury.io/gh/ahmadhayyan%2Fahnotification.js.svg)](../../)
-[![ahNotification only 6 KB](https://badge-size.herokuapp.com/ahmadhayyan/ahnotification.js/main/ahNotification.min.js)](ahNotification.min.js)
+[![ahNotification only 6 KB](https://img.badgesize.io/ahmadhayyan/ahnotification.js/main/ahNotification.min.js)](ahNotification.min.js)
 [![ahNotification demo](https://img.shields.io/static/v1?label=Demo&message=Website&color=4dc820)](https://ahnotification.js.org)
 [![ahNotification license](https://img.shields.io/npm/l/tabler.svg?label=License&message=MIT&color=4dc820)](LICENSE)
 
